@@ -37,6 +37,7 @@ curl -X POST \
 or you can use a tool like Postman to make a call.
 
 If successful, you'll see message  "Email Sent Successfully!!"
+
 For errors, Error message in form of JSON will be displayed.
 
 # JSON Input Field Description
