@@ -20,6 +20,25 @@ To deliver emails to recipients with a failover recovery.
 * API keys for third party APIs are from properties file, will add in DB ideally.
 * For failover, used Spring Retry, assuming only 2 third party libraries are used.
 
+# Pre-requisites for Set up/ Deployment
+* Java 8
+* Tomcat Server
+* If you use gradle wrapper, no need of gradle else need to install gradle 5.6.2
+* Access to internet.
+
+# Set Up/Deploy
+* Clone the repository in your local and import this project as a gradle project.
+* Create accounts with Sendgrid and Mailgun to get their API keys. 
+* Add those API keys in application.properties file, (DON'T COMMIT API KEYS TO GITHUB Public Repo)
+* Also Update the Mailgun domain in application.properties file under "emailws.mailgun.endpoint", just remeber to add "/messages" at the end to complete the endpoint.
+* Build your gradle project using gradle wrapper.
+* To run it locally, just use command "./gradlew bootrun"
+* To deploy it on server, go to <project_home>/build/libs/, copy the war to the tomcat webapps folder
+* Now run the tomcat using ./catalina.sh run , catalina.sh will be found in <tomcat_home>/bin/
+* To check whether your service is running, use "http://localhost:8080/check", this should print " Service is running..."
+* To send emails please refer below section.
+
+
 # Sending emails 
 Use Curl command to send email
 
