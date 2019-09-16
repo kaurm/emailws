@@ -27,7 +27,7 @@ import com.email.ws.service.EmailService;
 public class EmailController {
 
 	@Autowired
-	@Qualifier(value = "sendGridEmailService")
+	@Qualifier(value = "mailGunEmailService")
 	public EmailService emailService;
 
 	
